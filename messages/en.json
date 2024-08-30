@@ -51,6 +51,58 @@
 			"hour": "{count, plural, =1 {# hour} other {# hours}}",
 			"month": "{count, plural, =1 {# month} other {# months}}",
 			"week": "{count, plural, =1 {# week} other {# weeks}}"
+		},
+		"navbar": {
+			"Shop": {
+				"title": "Shop",
+				"items": {
+					"allProducts": {
+						"title": "All products",
+						"description": "All products in our store are listed here."
+					},
+					"bags": {
+						"title": "Bags",
+						"description": "All bag products in our store."
+					},
+					"backpacks": {
+						"title": "Backpacks",
+						"description": "All backpack products in our store."
+					}
+				}
+			},
+			"About": {
+				"title": "About",
+				"items": {
+					"features": {
+						"title": "Features",
+						"description": "A list of all the features of Your Next Store."
+					},
+					"whereToBuy": {
+						"title": "Where to buy",
+						"description": "Join our community and get the latest news about our products."
+					}
+				}
+			},
+			"SocialNetwork": {
+				"title": "Social Networks",
+				"items": {
+					"instagram": {
+						"title": "Instagram",
+						"description": "Follow us on Instagram to get inspired by the latest trends and updates. Don't miss our daily posts!"
+					},
+					"facebook": {
+						"title": "Facebook",
+						"description": "Like our Facebook page and stay updated with exclusive news. Join our community today!"
+					},
+					"whatsapp": {
+						"title": "Whatsapp",
+						"description": "Contact us on WhatsApp for quick and personalized support. We're here to help!"
+					}
+				}
+			}
+		},
+		"buttons": {
+			"buyNow": "Buy now"
 		}
 	},
 	"/": {
@@ -58,7 +110,10 @@
 			"title": "Discover our Curated Collection",
 			"description": "Explore our carefully selected products for your home and lifestyle.",
 			"action": "Shop Now",
-			"link": "/category/accessories"
+			"link": "/products"
+		},
+		"categoryBox": {
+			"shopNow": "Shop now"
 		}
 	},
 	"/search": {

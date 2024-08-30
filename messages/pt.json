@@ -1,0 +1,247 @@
+{
+	"Global": {
+		"metadata": {
+			"title": "Sua Próxima Loja - Demo",
+			"description": "Um boilerplate Next.js para construir sua loja online instantaneamente: simples, rápido, poderoso."
+		},
+		"notFound": {
+			"title": "Não encontrado",
+			"description": "A página que você estava procurando não existe.",
+			"goBackLink": "Voltar para a página inicial"
+		},
+		"globalError": {
+			"title": "Algo deu errado!",
+			"moreDetails": "Mais detalhes",
+			"tryAgainButton": "Tentar novamente"
+		},
+		"error": {
+			"title": "Ops, algo deu errado!",
+			"goBackLink": "Tentar novamente"
+		},
+		"footer": {
+			"newsletterTitle": "Inscreva-se em nossa newsletter",
+			"categoriesTitle": "Produtos"
+		},
+		"newsletter": {
+			"emailPlaceholder": "Digite seu e-mail",
+			"subscribeButton": "Inscrever-se",
+			"success": "Você se inscreveu com sucesso em nossa newsletter.",
+			"error": "Falha ao se inscrever em nossa newsletter."
+		},
+		"nav": {
+			"search": {
+				"title": "Buscar",
+				"placeholder": "Buscar produtos…"
+			},
+			"cartSummary": {
+				"itemsInCart": "Itens no carrinho",
+				"total": "Total",
+				"totalItems": "{count, plural, =0 {Nenhum item} =1 {# item} other {# itens}} no carrinho"
+			}
+		},
+		"addToCart": {
+			"success": "{productName} adicionado ao carrinho",
+			"actionButton": "Adicionar ao carrinho"
+		},
+		"deliveryEstimates": {
+			"atLeast": "Pelo menos",
+			"upTo": "Até",
+			"businessDay": "{count, plural, =1 {# dia útil} other {# dias úteis}}",
+			"day": "{count, plural, =1 {# dia} other {# dias}}",
+			"hour": "{count, plural, =1 {# hora} other {# horas}}",
+			"month": "{count, plural, =1 {# mês} other {# meses}}",
+			"week": "{count, plural, =1 {# semana} other {# semanas}}"
+		},
+		"navbar": {
+			"Shop": {
+				"title": "Loja",
+				"items": {
+					"allProducts": {
+						"title": "Todos os produtos",
+						"description": "Todos os produtos da nossa loja estão listados aqui."
+					},
+					"bags": {
+						"title": "Bolsas",
+						"description": "Todos os produtos de bolsas na nossa loja."
+					},
+					"backpacks": {
+						"title": "Mochilas",
+						"description": "Todos os produtos de mochilas na nossa loja."
+					}
+				}
+			},
+			"About": {
+				"title": "Sobre",
+				"items": {
+					"features": {
+						"title": "Recursos",
+						"description": "Uma lista de todos os recursos da Sua Próxima Loja."
+					},
+					"whereToBuy": {
+						"title": "Onde comprar",
+						"description": "Junte-se à nossa comunidade e receba as últimas notícias sobre nossos produtos."
+					}
+				}
+			},
+			"SocialNetwork": {
+				"title": "Redes sociais",
+				"items": {
+					"instagram": {
+						"title": "Instagram",
+						"description": "Siga-nos no Instagram para se inspirar com as últimas tendências e novidades. Não perca nossas atualizações diárias!"
+					},
+					"facebook": {
+						"title": "Facebook",
+						"description": "Curta nossa página no Facebook e fique por dentro das novidades exclusivas. Junte-se à nossa comunidade hoje mesmo!"
+					},
+					"whatsapp": {
+						"title": "Whatsapp",
+						"description": "Entre em contato conosco pelo WhatsApp para atendimento rápido e personalizado. Estamos aqui para ajudar!"
+					}
+				}
+			}
+		},
+		"buttons": {
+			"buyNow": "Comprar agora"
+		}
+	},
+	"/": {
+		"hero": {
+			"title": "Descubra nossa Coleção Curada",
+			"description": "Explore nossos produtos cuidadosamente selecionados para sua casa e estilo de vida.",
+			"action": "Compre Agora",
+			"link": "/products"
+		},
+		"categoryBox": {
+			"shopNow": "Compre agora"
+		}
+	},
+	"/search": {
+		"notFound": {
+			"title": "Nenhum Resultado Encontrado para \"{query}\"",
+			"description": "Desculpe, não encontramos nenhum resultado que corresponda à sua pesquisa. Por favor, tente refinar sua busca."
+		},
+		"metadata": {
+			"title": "Busca: {query} · Sua Próxima Loja"
+		},
+		"page": {
+			"title": "Buscando por \"{query}\""
+		},
+		"loading": {
+			"title": "Buscando por"
+		}
+	},
+	"/products": {
+		"metadata": {
+			"title": "Todos os Produtos · Sua Próxima Loja"
+		},
+		"page": {
+			"title": "Todos os Produtos"
+		}
+	},
+	"/product": {
+		"metadata": {
+			"title": "{productName} · Sua Próxima Loja"
+		},
+		"page": {
+			"allProducts": "Todos os produtos",
+			"imagesTitle": "Imagens",
+			"descriptionTitle": "Descrição",
+			"variantTitle": "Variante"
+		}
+	},
+	"/category": {
+		"metadata": {
+			"title": "Categoria {categoryName} · Sua Próxima Loja"
+		},
+		"page": {
+			"title": "Categoria: {categoryName}"
+		}
+	},
+	"/cart": {
+		"modal": {
+			"title": "Carrinho de Compras",
+			"openFullView": "(abrir visão completa)",
+			"quantity": "Quantidade: {quantity}",
+			"total": "Total",
+			"shippingAndTaxesInfo": "Frete e impostos serão adicionados na próxima etapa",
+			"goToPaymentButton": "Ir para o pagamento"
+		},
+		"metadata": {
+			"title": "Carrinho de Compras · Sua Próxima Loja"
+		},
+		"page": {
+			"title": "Seu carrinho",
+			"checkoutTitle": "Finalizar Compra",
+			"checkoutDescription": "Forneça os detalhes de cobrança e envio abaixo.",
+			"summaryTable": {
+				"imageCol": "Imagem",
+				"productCol": "Produto",
+				"priceCol": "Preço",
+				"quantityCol": "Quantidade",
+				"totalCol": "Total",
+				"totalSummary": "TOTAL"
+			},
+			"stripePayment": {
+				"fillRequiredFields": "Por favor, preencha os campos obrigatórios.",
+				"unexpectedError": "Ocorreu um erro inesperado.",
+				"billingSameAsShipping": "Endereço de cobrança igual ao de envio",
+				"billingAddressTitle": "Endereço de cobrança",
+				"payNowButton": "Pagar agora",
+				"errorTitle": "Erro",
+				"fullName": "Nome completo",
+				"address1": "Endereço",
+				"address2": "Endereço (cont.)",
+				"postalCode": "Código Postal",
+				"city": "Cidade",
+				"state": "Estado / Região",
+				"country": "País",
+				"phone": "Número de telefone",
+				"taxId": "CPF",
+				"taxIdPlaceholder": "ex. BR123456789"
+			},
+			"formErrors": {
+				"nameRequired": "Nome é obrigatório",
+				"cityRequired": "Cidade é obrigatória",
+				"countryRequired": "País é obrigatório",
+				"line1Required": "Endereço é obrigatório",
+				"postalCodeRequired": "Código postal é obrigatório"
+			}
+		},
+		"empty": {
+			"title": "Seu carrinho está vazio",
+			"description": "Parece que você ainda não adicionou nada ao seu carrinho.",
+			"continueShoppingButton": "Continuar comprando"
+		}
+	},
+	"/order": {
+		"metadata": {
+			"title": "Confirmação de Pedido · Sua Próxima Loja"
+		},
+		"page": {
+			"title": "Confirmação de Pedido",
+			"description": "Obrigado! Você encontrará os detalhes do seu pedido abaixo.",
+			"orderNumberTitle": "Número do pedido",
+			"productsTitle": "Produtos neste pedido",
+			"price": "Preço",
+			"quantity": "Quantidade",
+			"total": "Total",
+			"detailsTitle": "Detalhes do pedido",
+			"shippingAddress": "Endereço de envio",
+			"billingAddress": "Endereço de cobrança",
+			"taxId": "CPF",
+			"paymentMethod": "Método de pagamento",
+			"cardBrand": "Bandeira do cartão",
+			"last4CardDigitsLabel": "Número do cartão terminando em"
+		},
+		"paymentStatus": {
+			"canceled": "Cancelado",
+			"processing": "Processando",
+			"requires_action": "Requer Ação",
+			"requires_capture": "Requer Captura",
+			"requires_confirmation": "Requer Confirmação",
+			"requires_payment_method": "Requer Método de Pagamento",
+			"succeeded": "Concluído"
+		}
+	}
+}

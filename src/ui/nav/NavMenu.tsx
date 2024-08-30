@@ -1,10 +1,16 @@
 "use client";
 
 import * as React from "react";
-
-// TODO https://github.com/radix-ui/primitives/issues/2769
-
+import { useTranslations } from "next-intl";
 import { useState, type ComponentPropsWithRef, type KeyboardEvent, type PointerEvent } from "react";
+import {
+	Instagram,
+	Facebook,
+	MessageCircle,
+	ShoppingBag,
+	Backpack,
+	GalleryHorizontalEnd,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
 	NavigationMenu,
@@ -13,24 +19,30 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
 } from "@/ui/shadcn/navigation-menu";
 import { YnsLink } from "@/ui/YnsLink";
 
 const links = [
 	{
-		title: "Features",
-		href: "https://yournextstore.com/#features",
-		description: "A list of all the features of Your Next Store.",
+		key: "SocialNetwork.items.instagram",
+		icon: Instagram,
+		href: "https://www.instagram.com/graca_e_paz_croche",
 	},
 	{
-		title: "Where to buy",
-		href: "https://yournextstore.com",
-		description: "Join our community and get the latest news about our products.",
+		key: "SocialNetwork.items.facebook",
+		icon: Facebook,
+		href: "https://www.facebook.com/people/Gra%C3%A7a-Paz-Croch%C3%AA-Shop/61553362634893/",
+	},
+	{
+		key: "SocialNetwork.items.whatsapp",
+		icon: MessageCircle,
+		href: "https://wa.me/5548996658979",
 	},
 ];
 
 export function NavMenu() {
+	const t = useTranslations("Global.navbar");
+
 	const [value, setValue] = useState<string | undefined>(undefined);
 	return (
 		<NavigationMenu value={value} onValueChange={setValue}>
@@ -39,31 +51,29 @@ export function NavMenu() {
 					<NavigationMenuTriggerWithFixedUX
 						onKeyboardOpen={() => setValue((value) => (value === "shop" ? undefined : "shop"))}
 					>
-						Shop
+						{t("Shop.title")}
 					</NavigationMenuTriggerWithFixedUX>
 					<NavigationMenuContent>
 						<ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<li className="row-span-3">
-								<NavigationMenuLink asChild>
-									<YnsLink
-										className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-										href="/"
-									>
-										<div className="mb-2 mt-4 text-lg font-medium">YNS</div>
-										<p className="leading-tight text-muted-foreground">
-											Your Next Store is the fastest and most compeling Stripe-powered storefront
-										</p>
-									</YnsLink>
-								</NavigationMenuLink>
-							</li>
-							<ListItem href="/products" title="All products">
-								All products in our store are listed here.
+							<span className="row-span-3">
+								<ListItem
+									href="/products"
+									title={t("Shop.items.allProducts.title")}
+									icon={GalleryHorizontalEnd}
+								>
+									{t("Shop.items.allProducts.description")}
+								</ListItem>
+							</span>
+
+							<ListItem href="/category/bags" title={t("Shop.items.bags.title")} icon={ShoppingBag}>
+								{t("Shop.items.bags.description")}
 							</ListItem>
-							<ListItem href="/category/apparel" title="Apparel">
-								All apparel products in our store.
-							</ListItem>
-							<ListItem href="/category/accessories" title="Accessories">
-								All accessories products in our store.
+							<ListItem
+								href="/category/backpacks"
+								title={t("Shop.items.backpacks.title")}
+								icon={Backpack}
+							>
+								{t("Shop.items.backpacks.description")}
 							</ListItem>
 						</ul>
 					</NavigationMenuContent>
@@ -72,24 +82,23 @@ export function NavMenu() {
 					<NavigationMenuTriggerWithFixedUX
 						onKeyboardOpen={() => setValue((value) => (value === "about" ? undefined : "about"))}
 					>
-						About
+						{t("SocialNetwork.title")}
 					</NavigationMenuTriggerWithFixedUX>
 					<NavigationMenuContent>
 						<ul className="grid gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px] xl:w-[600px]">
 							{links.map((link) => (
-								<ListItem key={link.title} title={link.title} href={link.href} target="_blank">
-									{link.description}
+								<ListItem
+									key={link.key}
+									title={t(`${link.key}.title`)}
+									href={link.href}
+									target="_blank"
+									icon={link.icon}
+								>
+									{t(`${link.key}.description`)}
 								</ListItem>
 							))}
 						</ul>
 					</NavigationMenuContent>
-				</NavigationMenuItem>
-				<NavigationMenuItem value="documentation">
-					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<YnsLink href="https://yournextstore.com/docs" target="_blank">
-							Documentation
-						</YnsLink>
-					</NavigationMenuLink>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 		</NavigationMenu>
@@ -102,8 +111,9 @@ const ListItem = ({
 	children,
 	href,
 	ref,
+	icon: Icon,
 	...props
-}: ComponentPropsWithRef<"a">) => {
+}: ComponentPropsWithRef<"a"> & { icon: React.ComponentType }) => {
 	return (
 		<li>
 			<NavigationMenuLink asChild>
@@ -116,7 +126,10 @@ const ListItem = ({
 					{...props}
 					href={href ?? "#"}
 				>
-					<div className="text-sm font-medium leading-none">{title}</div>
+					<div className="flex items-center space-x-2">
+						<Icon className="h-5 w-5" />
+						<span className="text-sm font-medium leading-none">{title}</span>
+					</div>
 					<p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
 				</YnsLink>
 			</NavigationMenuLink>
