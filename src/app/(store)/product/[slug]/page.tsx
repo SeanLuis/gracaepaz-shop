@@ -114,7 +114,6 @@ export default async function SingleProductPage({
 				<div className="lg:col-span-5 lg:col-start-8">
 					<h1 className="text-3xl font-bold leading-none tracking-tight text-foreground">
 						{product.name}
-						{product.metadata.link}
 					</h1>
 					{product.default_price.unit_amount && (
 						<p className="mt-2 text-2xl font-medium leading-none tracking-tight text-foreground/70">

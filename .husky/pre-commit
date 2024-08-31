@@ -1,2 +1,2 @@
-
-pnpm lint-staged
+#!/bin/sh
+npx pnpm lint-staged
