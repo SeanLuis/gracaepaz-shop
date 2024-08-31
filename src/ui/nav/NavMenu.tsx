@@ -38,7 +38,7 @@ const links = [
 		icon: MessageCircle,
 		href: "https://wa.me/5548996658979",
 	},
-];
+] as const;
 
 export function NavMenu() {
 	const t = useTranslations("Global.navbar");
@@ -127,7 +127,7 @@ const ListItem = ({
 					href={href ?? "#"}
 				>
 					<div className="flex items-center space-x-2">
-						<Icon className="h-5 w-5" />
+						<Icon />
 						<span className="text-sm font-medium leading-none">{title}</span>
 					</div>
 					<p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
