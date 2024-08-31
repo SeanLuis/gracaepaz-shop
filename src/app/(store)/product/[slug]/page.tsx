@@ -26,7 +26,6 @@ export const generateMetadata = async ({
 	searchParams: { variant?: string };
 }): Promise<Metadata> => {
 	const variants = await Commerce.productGet({ slug: params.slug });
-
 	const selectedVariant = searchParams.variant || variants[0]?.metadata.variant;
 	const product = variants.find((variant) => variant.metadata.variant === selectedVariant);
 	if (!product) {
@@ -173,7 +172,8 @@ export default async function SingleProductPage({
 													)}
 													aria-selected={isSelected}
 												>
-													{deslugify(variant.metadata.variant)}
+													{/* @ts-expect-error: TypeScript can't infer dynamic keys */}
+													{t(`variants.${variant.metadata.variant}`)}
 												</YnsLink>
 											</li>
 										)

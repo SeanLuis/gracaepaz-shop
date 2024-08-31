@@ -147,7 +147,11 @@
 			"allProducts": "All products",
 			"imagesTitle": "Images",
 			"descriptionTitle": "Description",
-			"variantTitle": "Variant"
+			"variantTitle": "Variant",
+			"variants": {
+				"short-strap": "Short strap",
+				"long-strap": "Long strap"
+			}
 		}
 	},
 	"/category": {

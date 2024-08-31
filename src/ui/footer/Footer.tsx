@@ -14,8 +14,11 @@ export async function Footer() {
 					<Newsletter />
 				</div>
 				<nav className="grid grid-cols-2 gap-16">
-					<CategoryLink title={t("navbar.Shop.items.bags.title")} slug="bags" />
-					<CategoryLink title={t("navbar.Shop.items.backpacks.title")} slug="backpacks" />
+					<section>
+						<h3 className="mb-2 font-semibold">{t("footer.categoriesTitle")}</h3>
+						<CategoryLink title={t("navbar.Shop.items.bags.title")} slug="bags" />
+						<CategoryLink title={t("navbar.Shop.items.backpacks.title")} slug="backpacks" />
+					</section>
 					<section>
 						<h3 className="mb-2 font-semibold">Misc</h3>
 						<ul role="list" className="grid gap-1">
@@ -57,16 +60,13 @@ type CategoryLinkProps = {
 
 function CategoryLink({ title, slug }: CategoryLinkProps) {
 	return (
-		<section>
-			<h3 className="mb-2 font-semibold">{title}</h3>
-			<ul role="list" className="grid gap-1">
-				<li>
-					<YnsLink className="underline-offset-4 hover:underline" href={`/category/${slug}`}>
-						{title}
-					</YnsLink>
-				</li>
-			</ul>
-		</section>
+		<ul role="list" className="grid gap-1">
+			<li>
+				<YnsLink className="underline-offset-4 hover:underline" href={`/category/${slug}`}>
+					{title}
+				</YnsLink>
+			</li>
+		</ul>
 	);
 }
 

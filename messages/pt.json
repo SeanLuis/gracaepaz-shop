@@ -147,7 +147,11 @@
 			"allProducts": "Todos os produtos",
 			"imagesTitle": "Imagens",
 			"descriptionTitle": "Descrição",
-			"variantTitle": "Variante"
+			"variantTitle": "Variante",
+			"variants": {
+				"short-strap": "Alça curta",
+				"long-strap": "Alça longa"
+			}
 		}
 	},
 	"/category": {
