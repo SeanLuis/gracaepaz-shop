@@ -1,7 +1,6 @@
 import { type SVGAttributes } from "react";
 import { getTranslations } from "next-intl/server";
 import { Categories } from "@/ui/nav/Nav";
-import { deslugify } from "@/lib/utils";
 import { YnsLink } from "@/ui/YnsLink";
 import { Newsletter } from "@/ui/footer/Newsletter.client";
 
