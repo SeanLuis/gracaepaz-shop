@@ -3,7 +3,6 @@ import Image from "next/image";
 import { type Metadata } from "next/types";
 import { getLocale, getTranslations } from "next-intl/server";
 import * as Commerce from "commerce-kit";
-import { useTranslations } from "next-intl";
 import { Markdown } from "@/ui/Markdown";
 import { JsonLd, mappedProductToJsonLd } from "@/ui/JsonLd";
 import {
@@ -56,8 +55,6 @@ export default async function SingleProductPage({
 	params: { slug: string };
 	searchParams: { variant?: string };
 }) {
-	const t = useTranslations("/product.page");
-
 	const variants = await Commerce.productGet({ slug: params.slug });
 	const selectedVariant = searchParams.variant || variants[0]?.metadata.variant;
 	const product = variants.find((variant) => variant.metadata.variant === selectedVariant);
@@ -66,6 +63,7 @@ export default async function SingleProductPage({
 		return notFound();
 	}
 
+	const t = await getTranslations("/product.page");
 	const locale = await getLocale();
 
 	const category = product.metadata.category;
