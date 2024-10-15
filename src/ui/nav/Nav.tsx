@@ -1,4 +1,3 @@
-import { CartSummaryNav } from "@/ui/nav/CartSummaryNav";
 import { SeoH1 } from "@/ui/SeoH1";
 import { SearchNav } from "@/ui/nav/SearchNav";
 import { NavMenu } from "@/ui/nav/NavMenu";
@@ -7,6 +6,7 @@ import { YnsLink } from "@/ui/YnsLink";
 export const Categories = [
 	{ name: "Bags", slug: "bags", key: "bags" },
 	{ name: "Backpacks", slug: "backpacks", key: "backpacks" },
+	{ name: "Pouches", slug: "pouch", key: "pouches" },
 ];
 
 export const Nav = () => {
@@ -23,7 +23,7 @@ export const Nav = () => {
 
 				<div className="flex items-center justify-start gap-x-6">
 					<SearchNav />
-					<CartSummaryNav />
+					{/* <CartSummaryNav /> */}
 				</div>
 			</div>
 		</header>

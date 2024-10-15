@@ -7,6 +7,7 @@ import { CategoryBox } from "@/ui/CategoryBox";
 import BackpacksImage from "@/images/backpacks.jpg";
 import InitPorductImage from "@/images/init-product.png";
 import BagslImage from "@/images/bags.jpg";
+import PoucheslImage from "@/images/pouches.jpg";
 import { YnsLink } from "@/ui/YnsLink";
 import { publicUrl } from "@/env.mjs";
 
@@ -53,10 +54,11 @@ export default async function Home() {
 			<ProductList products={products} />
 
 			<section className="w-full py-8">
-				<div className="grid gap-8 lg:grid-cols-2">
+				<div className="grid grid-cols-3 gap-8">
 					{[
 						{ categorySlug: "backpacks", src: BackpacksImage },
 						{ categorySlug: "bags", src: BagslImage },
+						{ categorySlug: "pouch", src: PoucheslImage },
 					].map(({ categorySlug, src }) => (
 						<CategoryBox key={categorySlug} categorySlug={categorySlug} src={src} />
 					))}

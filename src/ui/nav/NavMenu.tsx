@@ -9,6 +9,7 @@ import {
 	MessageCircle,
 	ShoppingBag,
 	Backpack,
+	WalletCards,
 	GalleryHorizontalEnd,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -74,6 +75,13 @@ export function NavMenu() {
 								icon={Backpack}
 							>
 								{t("Shop.items.backpacks.description")}
+							</ListItem>
+							<ListItem
+								href="/category/pouch"
+								title={t("Shop.items.pouches.title")}
+								icon={WalletCards}
+							>
+								{t("Shop.items.pouches.description")}
 							</ListItem>
 						</ul>
 					</NavigationMenuContent>

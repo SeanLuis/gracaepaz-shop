@@ -67,6 +67,10 @@
 					"backpacks": {
 						"title": "Mochilas",
 						"description": "Todos os produtos de mochilas na nossa loja."
+					},
+					"pouches": {
+						"title": "Práticos",
+						"description": "Todos os produtos práticos da nossa loja."
 					}
 				}
 			},
@@ -150,7 +154,11 @@
 			"variantTitle": "Variante",
 			"variants": {
 				"short-strap": "Alça curta",
-				"long-strap": "Alça longa"
+				"long-strap": "Alça longa",
+				"larger": "Maior",
+				"smaller": "Menor",
+				"with-button": "Com botão",
+				"with-zipper": "Com zipper"
 			}
 		}
 	},

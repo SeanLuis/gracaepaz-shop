@@ -67,6 +67,10 @@
 					"backpacks": {
 						"title": "Backpacks",
 						"description": "All backpack products in our store."
+					},
+					"pouches": {
+						"title": "Pouches",
+						"description": "All pouch products in our store."
 					}
 				}
 			},
@@ -150,7 +154,11 @@
 			"variantTitle": "Variant",
 			"variants": {
 				"short-strap": "Short strap",
-				"long-strap": "Long strap"
+				"long-strap": "Long strap",
+				"larger": "Larger",
+				"smaller": "Smaller",
+				"with-button": "With button",
+				"with-zipper": "With zipper"
 			}
 		}
 	},
