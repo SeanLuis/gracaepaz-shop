@@ -1,8 +1,8 @@
 {
 	"Global": {
 		"metadata": {
-			"title": "Sua Próxima Loja - Demo",
-			"description": "Um boilerplate Next.js para construir sua loja online instantaneamente: simples, rápido, poderoso."
+			"title": "Graça & Paz Crochê - Shop",
+			"description": "Explore e escolha o modelo perfeito para qualquer ocasião, personalizando nas cores e detalhes que você deseja."
 		},
 		"notFound": {
 			"title": "Não encontrado",
@@ -111,8 +111,8 @@
 	},
 	"/": {
 		"hero": {
-			"title": "Descubra nossa Coleção Curada",
-			"description": "Explore nossos produtos cuidadosamente selecionados para sua casa e estilo de vida.",
+			"title": "Crochê com estilo: bolsas únicas para cada momento",
+			"description": "Explore e escolha o modelo perfeito para qualquer ocasião, personalizando nas cores e detalhes que você deseja.",
 			"action": "Compre Agora",
 			"link": "/products"
 		},
