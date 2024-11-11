@@ -56,6 +56,21 @@ export default async function SingleProductPage({
 	searchParams: { variant?: string };
 }) {
 	const variants = await Commerce.productGet({ slug: params.slug });
+	variants.sort((a, b) => {
+		const variantA = a.metadata.variant ?? "";
+		const variantB = b.metadata.variant ?? "";
+
+		// Extract numbers if they exist
+		const numA = parseInt(variantA.match(/\d+/)?.[0] || "0");
+		const numB = parseInt(variantB.match(/\d+/)?.[0] || "0");
+
+		if (numA !== numB) {
+			return numA - numB;
+		}
+
+		// If numbers are equal or don't exist, sort alphabetically
+		return variantA.localeCompare(variantB);
+	});
 	const selectedVariant = searchParams.variant || variants[0]?.metadata.variant;
 	const product = variants.find((variant) => variant.metadata.variant === selectedVariant);
 
