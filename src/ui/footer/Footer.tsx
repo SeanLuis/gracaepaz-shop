@@ -19,6 +19,7 @@ export async function Footer() {
 						<CategoryLink title={t("navbar.Shop.items.bags.title")} slug="bags" />
 						<CategoryLink title={t("navbar.Shop.items.backpacks.title")} slug="backpacks" />
 						<CategoryLink title={t("navbar.Shop.items.pouches.title")} slug="pouch" />
+						<CategoryLink title={t("navbar.Shop.items.clothes.title")} slug="clothes" />
 					</section>
 					<section>
 						<h3 className="mb-2 font-semibold">Misc</h3>

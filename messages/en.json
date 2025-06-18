@@ -71,6 +71,10 @@
 					"pouches": {
 						"title": "Pouches",
 						"description": "All pouch products in our store."
+					},
+					"clothes": {
+						"title": "Clothes",
+						"description": "All clothing products in our store."
 					}
 				}
 			},

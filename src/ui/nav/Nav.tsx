@@ -7,6 +7,7 @@ export const Categories = [
 	{ name: "Bags", slug: "bags", key: "bags" },
 	{ name: "Backpacks", slug: "backpacks", key: "backpacks" },
 	{ name: "Pouches", slug: "pouch", key: "pouches" },
+	{ name: "Clothes", slug: "clothes", key: "clothes" },
 ];
 
 export const Nav = () => {

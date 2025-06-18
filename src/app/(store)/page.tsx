@@ -7,6 +7,7 @@ import { CategoryBox } from "@/ui/CategoryBox";
 import BackpacksImage from "@/images/backpacks.jpg";
 import InitPorductImage from "@/images/init-product.png";
 import BagslImage from "@/images/bags.jpg";
+import ClothesImage from "@/images/clothes.jpg";
 import PoucheslImage from "@/images/pouches.jpg";
 import { YnsLink } from "@/ui/YnsLink";
 import { publicUrl } from "@/env.mjs";
@@ -59,6 +60,7 @@ export default async function Home() {
 						{ categorySlug: "backpacks", src: BackpacksImage },
 						{ categorySlug: "bags", src: BagslImage },
 						{ categorySlug: "pouch", src: PoucheslImage },
+						{ categorySlug: "clothes", src: ClothesImage },
 					].map(({ categorySlug, src }) => (
 						<CategoryBox key={categorySlug} categorySlug={categorySlug} src={src} />
 					))}

@@ -71,6 +71,10 @@
 					"pouches": {
 						"title": "Práticos",
 						"description": "Todos os produtos práticos da nossa loja."
+					},
+					"clothes": {
+						"title": "Roupas",
+						"description": "Todos os produtos de roupas na nossa loja."
 					}
 				}
 			},
