@@ -75,6 +75,10 @@
 					"clothes": {
 						"title": "Roupas",
 						"description": "Todos os produtos de roupas na nossa loja."
+					},
+					"accessories": {
+						"title": "Acessórios",
+						"description": "Todos os produtos acessórios da nossa loja."
 					}
 				}
 			},

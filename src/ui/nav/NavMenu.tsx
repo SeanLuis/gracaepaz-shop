@@ -12,6 +12,7 @@ import {
 	WalletCards,
 	GalleryHorizontalEnd,
 	Layers,
+	Gem,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -57,7 +58,7 @@ export function NavMenu() {
 					</NavigationMenuTriggerWithFixedUX>
 					<NavigationMenuContent>
 						<ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-							<span className="row-span-4">
+							<span className="row-span-5">
 								<ListItem
 									href="/products"
 									title={t("Shop.items.allProducts.title")}
@@ -83,6 +84,13 @@ export function NavMenu() {
 								icon={WalletCards}
 							>
 								{t("Shop.items.pouches.description")}
+							</ListItem>
+							<ListItem
+								href="/category/accessories"
+								title={t("Shop.items.accessories.title")}
+								icon={Gem}
+							>
+								{t("Shop.items.accessories.description")}
 							</ListItem>
 							<ListItem
 								href="/category/clothes"
