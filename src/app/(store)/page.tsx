@@ -9,7 +9,7 @@ import InitPorductImage from "@/images/init-product.png";
 import BagslImage from "@/images/bags.jpg";
 import ClothesImage from "@/images/clothes.jpg";
 import PoucheslImage from "@/images/pouches.jpg";
-import AccessoriesImage from "@/images/accessories.jpeg";
+import AccessoriesImage from "@/images/accessories.jpg";
 import { YnsLink } from "@/ui/YnsLink";
 import { publicUrl } from "@/env.mjs";
 
